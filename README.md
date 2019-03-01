@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+* `map` returns a new array of elements and `forEach` can be more directly used to alter the existing array.
+
 2. What is the difference between a function and a method?
+
+* A method is (essentially) a function that lives within an object and can be called on that object using dot notation. Other functions can be invoked independent of an object.
 
 3. What is closure?
 
+* Javascript has a two-pass compiler. On the first pass, the compiler collects all references that will be needed in each execution context and places them within that context as a closure to be used on the second pass.
+
 4. Describe the four rules of the 'this' keyword.
 
+* (1) Without added context (operating in global scope), `this` is bound to the window/console Object. (2) Object methods implicitly bind `this` to the object that the method is being called upon (whatever precedes the dot). (3) Within a constructor function, `this` is bound to the object being created after the constructor function is invoked with the `new` keyword. (4) You can explicitly override what `this` is bound to using `call`, `apply`, or `bind`.
+
 5. Why do we need super() in an extended class?
+
+* `super()` passes new attributes up the inheritance chain until reaching the constructor of the top-level class, now with all the child attributes.
 
 ## Project Set up
 
@@ -53,7 +63,7 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
 - [ ] PM then will count the HW as done by  merging the branch back into master.
 
