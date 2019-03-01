@@ -26,6 +26,8 @@ console.log(cuboid2.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker2 {
   constructor(attr) {
     super(attr);
+    this.width = attr.length;
+    this.height = attr.length;
   }
   cubeVolume() {
     return this.length ** 3;
@@ -37,3 +39,7 @@ class CubeMaker extends CuboidMaker2 {
 const cube = new CubeMaker({ length: 5 });
 console.log(cube.cubeVolume()); // 125 | Ref: https://www.wolframalpha.com/input/?i=volume+of+a+cube+with+sides+of+length+5
 console.log(cube.cubeSurfaceArea()); // 150 | Ref: https://www.wolframalpha.com/input/?i=surface+area+of+a+cube+with+sides+of+length+5
+
+// The original formulas still work, too, because I set height and width equal to length for cubes and the formula for cubes is ultimately the same as for cuboids, once you assume that all sides are of equal length
+console.log(cube.volume());
+console.log(cube.surfaceArea());
